@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: #d4d4d4; 
+  color: rgb(0, 0, 0); /* Icon and text color */
+}
+
+.menu-icon, .profile-icon {
+  font-size: 24px; /* Icon size */
+  cursor: pointer;
+}
+
+.title-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.page-title {
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+.camera-container {
+  width: 100%; 
+  height: 60vh; 
+  margin-top: 16px;
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center the webcam view horizontally */
+  align-items: center; /* Center the webcam view vertically */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+/* Circle button styling */
+.circle-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+  background-color: #0056b3;
+}
+
+.side-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.ocr-result {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.ocr-result h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.ocr-result p {
+  margin: 4px 0 0;
+  font-size: 16px;
+}

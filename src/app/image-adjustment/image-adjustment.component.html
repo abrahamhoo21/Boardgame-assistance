@@ -1,0 +1,16 @@
+<div class="image-adjustment-container">
+    <image-cropper
+      [imageBase64]="image"
+      format="png"
+      (imageCropped)="onImageCropped($event)">
+    </image-cropper>
+  
+    <div class="button-group">
+      <button class="circle-button" (click)="confirm()">
+        <i class="bi bi-check-circle"></i> <!-- Confirm Icon -->
+      </button>
+      <button class="circle-button" (click)="retake()">
+        <i class="bi bi-arrow-counterclockwise"></i> <!-- Retake Icon -->
+      </button>
+    </div>
+  </div>
