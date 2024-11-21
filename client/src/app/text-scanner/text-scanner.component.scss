@@ -1,0 +1,52 @@
+.camera-container {
+  width: 100%; 
+  height: 70vh; 
+  margin-top: 16px;
+  display: flex; 
+  justify-content: center; /* Center the webcam view horizontally */
+  align-items: center; /* Center the webcam view vertically */
+  background-color: #e9ecef;
+  margin: 16px 0;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+/* Circle button styling */
+.circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.side-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+
+
+

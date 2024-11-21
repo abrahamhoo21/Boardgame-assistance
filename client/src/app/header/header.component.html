@@ -1,0 +1,20 @@
+<header class="app-header">
+    <!-- Menu Button -->
+    <button class="menu-button" (click)="toggleSidebar()">
+      <i class="bi bi-list"></i>
+    </button>
+  
+    <!-- App Title or Logo -->
+    <div class="app-title">
+      <i class="{{ iconClass }}"></i> {{ pageTitle }} <!-- Dynamically updated title and icon -->
+    </div>
+  
+    <!-- Profile Icon (Right side of the header) -->
+    <div class="profile-icon">
+        <button class="icon-button" (click)="onProfileClick()">
+        <i class="bi bi-person profile-icon"></i> <!-- Bootstrap icon for profile -->
+        </button>
+    </div>
+  </header>
+  
+  

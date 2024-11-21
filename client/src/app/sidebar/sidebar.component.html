@@ -1,0 +1,30 @@
+<div class="app-container">
+    <!-- Menu Icon -->
+    <button class="menu-button" (click)="toggleSidebar()">
+      <i [class]="isSidebarVisible ? 'bi-x' : 'bi-list'"></i>
+    </button>
+  
+    <!-- Sidebar -->
+    <div class="sidebar" [@slideInOut]="getSidebarState()">
+      <ul>
+        <li><a routerLink="/text-scanner" routerLinkActive="active" (click)="closeSidebar()">
+            <i class="bi-camera"></i> Text Scanner
+          </a>
+        </li>
+        <li><a routerLink="/scorekeeping" routerLinkActive="active" (click)="closeSidebar()">
+            <i class="bi-clipboard-data"></i> Scorekeeping
+          </a>
+        </li>
+        <li><a routerLink="/chatbot" routerLinkActive="active" (click)="closeSidebar()">
+            <i class="bi-chat-dots"></i> Chatbot
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

@@ -1,0 +1,37 @@
+<div *ngIf="image || pdfUrl" class="preview-container">
+<!-- Image Cropping Section -->
+  <div *ngIf="image" class="crop-container">
+      <image-cropper
+        [imageBase64]="image"
+        format="png"
+        [resizeToWidth]="500"
+        [maintainAspectRatio]="false"
+        [cropperMinWidth]="100"
+        [cropperMinHeight]="100"
+        (imageCropped)="onCroppedImage($event)"
+        (imageLoaded)="onImageLoaded()"
+        (loadImageFailed)="onLoadImageFailed()">
+      </image-cropper>
+  </div>
+</div>
+
+<!-- Cropped Dimensions Info -->
+<div *ngIf="croppedWidth && croppedHeight" class="crop-info">
+  <p>Cropped Dimensions: {{ croppedWidth }} x {{ croppedHeight }}</p>
+</div>
+
+<!-- PDF Preview Section -->
+<div *ngIf="pdfUrl">
+  <iframe [src]="pdfUrl" width="100%" height="600px"></iframe>
+</div>
+
+<div class="button-group">
+  <button class="circle-button" (click)="confirm()">
+    <i class="bi bi-check-circle"></i> 
+  </button>
+  <button class="circle-button" (click)="retake()">
+    <i class="bi bi-arrow-counterclockwise"></i> 
+  </button>
+</div>
+
+

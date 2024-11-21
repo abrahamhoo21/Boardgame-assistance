@@ -1,0 +1,17 @@
+<div class="text-container">
+  <h2>Extracted Text</h2>
+
+  <div *ngIf="extractedText; else noText">
+    <textarea [(ngModel)]="extractedText" rows="20" cols="50"></textarea>
+    <div class="actions">
+      <button (click)="copyText()">Copy Text</button>
+      <button (click)="retake()">Retake</button>
+    </div>
+  </div>
+
+  <ng-template #noText>
+    <p>No text was extracted. Please try again.</p>
+    <button (click)="retake()">Retake</button>
+  </ng-template>
+</div>
+

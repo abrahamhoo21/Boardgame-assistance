@@ -1,0 +1,28 @@
+<div class="app-layout">
+
+
+  <!-- Main Content with Webcam and Buttons -->
+  <div class="main-content">
+    <div class="camera-container">
+      <webcam [trigger]="trigger" (imageCapture)="handleImage($event)"></webcam>
+    </div>
+
+    <div class="button-group mt-3">
+      <button class="circle-button capture-button" (click)="captureImage($event)">
+        <i class="bi bi-camera"></i>
+      </button>
+
+      <div class="side-buttons">
+        <input type="file" id="gallery-input" (change)="selectGallery($event)" accept="image/*" class="hidden-input" />
+        <label for="gallery-input" class="circle-button side-button">
+          <i class="bi bi-image"></i>
+        </label>
+
+        <input type="file" id="pdf-input" (change)="uploadFile($event)" accept="application/pdf" class="hidden-input" />
+        <label for="pdf-input" class="circle-button side-button">
+          <i class="bi bi-upload"></i>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

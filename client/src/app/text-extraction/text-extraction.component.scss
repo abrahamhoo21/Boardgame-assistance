@@ -1,0 +1,50 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 200px; /* Ensures some space for larger text */
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 20px;
+}
+
+.actions button {
+  flex: 1; /* Each button takes equal space */
+  margin: 0 5px; /* Adds space between buttons */
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .actions button {
+    font-size: 14px;
+    padding: 8px 12px; /* Smaller padding for better fit */
+  }
+}
